@@ -5,9 +5,9 @@ canvas.height = window.innerHeight;
 const context = canvas.getContext("2d");
 const frameCount = 179;
 
-const currentFrame = (index) => `./best-ball/${(index + 1).toString()}.jpg`;
-
+const currentFrame = (index) => `./BlenderBallAnimation/${(index + 1).toString()}.jpg`;
 const images = [];
+
 let ball = { frame: 0 };
 
 for (let i = 0; i < frameCount; i++) {
@@ -16,6 +16,7 @@ for (let i = 0; i < frameCount; i++) {
   console.log(currentFrame(i));
   images.push(img);
 }
+console.log(images);
 
 gsap.to(ball, {
   frame: frameCount - 1,
